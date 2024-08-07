@@ -1,0 +1,15 @@
+public class ReverseandLengthoftheString {
+public static void main(String[] args) {
+	String s="vasunainala";
+	int length=0;
+	System.out.println("Given String is: "+s);
+	System.out.println("Reverse of given string is: ");
+	for(int i=s.length()-1;i>=0;i--)
+	{
+		length++;
+		System.out.print(s.charAt(i));
+	}
+	System.out.println();
+	System.out.println("Length of a given string is :"+length);
+}
+}

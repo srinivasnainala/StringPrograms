@@ -1,0 +1,17 @@
+public class NamesStartedWithGivenArrayofStrings {
+public static void main(String[] args) {
+	String s[]= {"vasu","sai","naveen","vinay"};
+	String s1[]= {"s","v"};
+	for(String p:s1)
+	{
+		System.out.println("Starts with the  "+p+ " is:");
+		for(String name:s)
+		{
+			if(name.startsWith(p))
+			{
+				System.out.println(name);
+			}
+		}
+	}
+}
+}

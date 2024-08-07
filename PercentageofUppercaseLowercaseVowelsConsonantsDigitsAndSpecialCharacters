@@ -1,0 +1,47 @@
+public class PercentageofUppercaseLowercaseVowelsConsonantsDigitsAndSpecialCharacters {
+public static void main(String[] args) {
+	int Uppercase=0,Lowercase=0,Vowels=0,consonants=0;
+	int length=0,digits=0,specialcharacters=0;
+	Scanner sc =new Scanner(System.in);
+	System.out.println("Enter a string :");
+	String s=sc.nextLine();
+	length=s.length();
+	for(int i=0;i<s.length();i++)
+	{
+		char ch=s.charAt(i);
+			if(Character.isUpperCase(ch))
+			{
+				Uppercase++;
+			}
+			else if(Character.isLowerCase(ch))
+			{
+				Lowercase++;
+			}
+			else if(Character.isDigit(ch))
+			{
+				digits++;
+            }
+			else
+			{
+				specialcharacters++;
+			}
+		if(Character.isAlphabetic(ch))
+		{
+			if(ch=='a' || ch=='e' || ch=='i' || ch=='o' || ch=='u')
+			{
+				Vowels++;
+			}
+			else
+			{
+				consonants++;
+			}
+		}
+	}
+	System.out.println("percentge of Uppercase is : "+Uppercase*100/length+"%");
+	System.out.println("percentge of Lowercase is : "+Lowercase*100/length+"%");
+	System.out.println("percentge of Digits is : "+digits*100/length+"%");
+	System.out.println("percentge of SpecialCharacters  is : "+specialcharacters*100/length+"%");
+	System.out.println("percentge of Vowels is : "+Vowels*100/length+"%");
+	System.out.println("percentge of Consonants is : "+consonants*100/length +"%");
+}
+}

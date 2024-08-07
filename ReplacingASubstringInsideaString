@@ -1,0 +1,12 @@
+public class ReplacingASubstringInsideaString {
+public static void main(String[] args) {
+	String s="vasunaidu";
+//	String s1=s.substring(4,s.length());
+	String s1=s.substring(4);
+	String s3="Nainala";
+	String s2=s.replace(s1, s3);
+	System.out.println("Given string is: "+s);
+	System.out.println("Replaced String: "+s2);
+}
+}
+

@@ -1,0 +1,32 @@
+
+public class SearchaWordInaGivenString {
+public static void main(String[] args) {
+	String s="i am vasu naidu nainala";
+	String word="";
+	s=s+" ";
+	for(int i=0;i<s.length();i++)
+	{
+		char ch=s.charAt(i);
+		if(ch!=' ')
+		{
+			word=word+ch;
+		}
+		else
+		{
+			System.out.println(word);
+			word="";
+		}
+	}
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter a word to search :");
+	String s1=sc.nextLine();
+	if(s.contains(s1))
+	{
+		System.out.println("Word is found :"+s1);
+	}
+	else
+	{
+		System.out.println("Word is not found : "+s1);
+	}
+}
+}

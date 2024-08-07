@@ -1,0 +1,39 @@
+public class MaxandMinoccurencesinaString {
+public static void main(String[] args) {
+	String s="abacd";
+	char minchar='x';
+	char maxchar='x';
+	int min=1;
+	int max=0;
+	for(int i=0;i<s.length();i++)
+	{
+		int count=1;
+		for(int j=i+1;j<s.length();j++)
+		{
+			if(s.charAt(i)==s.charAt(j))
+			{
+				if(i==j)
+				{
+					
+				}
+				else
+				{
+					count++;
+				}
+			}
+			if(count>=max)
+			{
+				max=count;
+				maxchar=s.charAt(i);
+			}
+			else if(count<=min)
+			{
+				min=count;
+				minchar=s.charAt(i);
+			}
+		}
+	}
+	System.out.println("Max number of occurences of a letter is : "+maxchar +" is "+max +" times");
+    System.out.println("Min number of occurences of a letter is : "+minchar +" is "+min +" times");
+}
+}
