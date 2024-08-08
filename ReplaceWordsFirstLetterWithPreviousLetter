@@ -1,25 +1,20 @@
+
 public class ReplaceWordsFirstLetterWithPreviousLetter {
-public static void main(String[] args) {
-	String s="vasu naidu nainala";
-	String word=" ";
-	String w="";
-	s=s+" ";
-	for(int i=0;i<s.length();i++)
-	{ 
-		char ch=s.charAt(i);
-		if(ch!=' ')
-		{
-			word=word+ch;
-			w=w+word.replace(word.charAt(0),word.charAt(word.length()-1));
-		}
-		else
-		{
-//System.out.println(word.replace(word.charAt(word.length()-1), word.charAt(0)));
-	System.out.println(word.replace(word.charAt(0), word.charAt(word.length()-1)));
-//			System.out.println( word);
-	    word="";
-		
-		}
-	}
-}
+    public static void main(String[] args) {
+        String s="vasu naidi nainala";
+        String w[]=s.split(" ");
+        for(int i=0;i<w.length;i++)
+        {
+            if (i == 0) 
+            {
+                w[i]=" "+w[i].substring(1);
+            }
+            else
+            {
+                w[i]=w[i-1].charAt(w[i-1].length()-1)+w[i].substring(1);
+            }
+        }
+        String s2=String.join(" ", w);
+        System.out.println(s2);
+    }
 }
